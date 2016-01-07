@@ -1,13 +1,6 @@
 # Board-Game
 A simple board game framework in Unity3d
 
-**Using the framework**
-First, set up the scene by adding at least one Sprite with a GameBoardTile Monobehavior, as well as a GameObject with the GameManager behavior.
+The main goal of this project is to be a quick starting point for those looking to make board games in Unity. Boards are made by adding Tile Prefabs to a scene and setting up 1-4 variables on each. The framework is made in 2d using sprites, but can be adapted to 3d with little work.
 
-*Tiles*
-Each Tile Sprite should have its TileNumber changed. Sequential tiles should be numbered as such. 
-If a tile has multiple exits, their Tile Numbers should be added to the TileConnections array. 
-If a tile has no connections that are sequential, it must be marked as Jump Tile, and it must have at least one tile connection out.
-
-**Players**
-Players are aded by the GameManager, through the PreparePlayers method, which must be supplied an integer. 
+Three example maps and an extended README are included in the project.

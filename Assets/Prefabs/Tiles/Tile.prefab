@@ -62,11 +62,9 @@ MonoBehaviour:
     rgba: 4278190335
   - serializedVersion: 2
     rgba: 4278255360
-  - serializedVersion: 2
-    rgba: 4294901760
   tileNumber: 0
   tileConnections: 
-  tileColor: 0
+  tileType: 0
   isJumpTile: 0
   isFinalTile: 0
 --- !u!212 &21287652
@@ -108,7 +106,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: colorArray.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
@@ -134,6 +132,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: colorArray.Array.data[2].rgba
       value: 4278255360
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorArray.Array.data[3].rgba
+      value: 4294901760
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -6,12 +6,11 @@ public class GameBoardTile : MonoBehaviour
     /// The first color should be blank (white)
     /// </summary>
     public Color32[] colorArray;
-    public enum TileColors
+    public enum TileTypes
     {
-        UNINITIALIZED,
-        GREEN,
-        BLUE,
-        RED
+        GROUND,
+        MAGMA,
+        FOREST
     }
     /// <summary>
     /// The tile's number on the game board. Also serves as th etile's id.
@@ -24,7 +23,7 @@ public class GameBoardTile : MonoBehaviour
     /// The first tile in the array is assumed to be the tile to jump to.
     /// </summary>
     public int[] tileConnections;
-    public TileColors tileColor = TileColors.UNINITIALIZED;
+    public TileTypes tileType = TileTypes.GROUND;
     /// <summary>
     /// Does this tile proceed to a specific, non-sequential tile? THERE MUST BE AT LEAST ONE TILE CONNECTION.
     /// </summary>
@@ -36,9 +35,9 @@ public class GameBoardTile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        tileColor = (TileColors)Random.Range(1, 4);
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        sr.color = colorArray[(int)tileColor];
+        tileType = (TileTypes)Random.Range(0, 3);
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();     //Remove this to prevent tiles from changing color
+        sr.color = colorArray[(int)tileType];
     }
 
     public void OnMouseDown()

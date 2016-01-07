@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
 
     public void MoveBySpaces(int spaces)
     {
-        player.placeable.MoveByAmount(spaces);
+        player.placeable.MoveByAmount(spaces); //This will cause an error if the player is already in mid-movement.
     }
     void Start () {
         PreparePlayers(1); //For testing purposes. This should be deleted for actual games.
